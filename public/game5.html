@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+
+<html lang="nl-NL">
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="HandheldFriendly" content="true">
+
+	<title>Figo and Friends breuken oefenen op kabamjo.ga</title>
+	<meta name="description" content="Hier kan je het Figo en Friends breuken spel spelen en zo spelenderwijs oefenen met breuken vermenigvuldigen, delen en optellen. Haal levels, verzamel munten en bevrijd je vrienden. " />	
+	<!-- Favicons -->
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="https://cdn-t-1.bvkstatic.com/nl/static/styles/style.css?25615" rel="stylesheet" />
+		<link rel="canonical" href="https://rekenenoefenen.gekkebultiscool.repl.co/game5.html" />
+
+	 
+	<!-- Favicons -->
+
+
+<style>
+
+style>
+*  
+    { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+}
+html {
+    height  : 100%;
+    overflow: hidden;
+}
+
+body {
+width:100%;
+height:100%;
+overflow: hidden;
+margin:0;
+padding:0;
+}
+
+
+
+
+
+
+
+ul {
+    padding:0;
+    margin:0;
+}
+
+li {
+    position:relative;
+    z-index:999999;
+    overflow:hidden;
+    list-style:none;
+    padding:0;
+    margin:0.25em 0 0.25em;
+}
+
+li a:link,
+li a:visited {
+    display:block;
+    border:0;
+    padding-left:28px;
+    color:#afdefa;
+}
+
+li:before,
+li:after,
+li a:before,
+li a:after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+}
+
+li a:before,
+li a:after {
+    margin:-8px 0 0;
+    background:#afdefa;
+}
+
+/* Not links */
+
+.player,
+.headphones,
+.ribbon,
+.views,
+.location,
+.info,
+.help,
+.pie,
+.success,
+.success-alt,
+.warning,
+.denied {
+    padding-left:28px;
+}
+
+/* FULL SCREEN
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.full:before,
+.full:after {
+    z-index:1;
+    left:8px;
+    width:3px;
+    height:8px;
+    border:5px solid #afdefa;
+    border-width:5px 0;
+    margin-top:-8px;
+    /* css3 */
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.full:after {
+    /* css3 */
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+
+
+
+.full a:before,
+.full a:after {
+    z-index:10;
+    width:4px;
+    height:0;
+    border-width:0 7px 7px;
+    border-style:solid;
+    border-color:transparent #afdefa;
+    margin-top:-8px;
+    background:transparent;
+}
+
+.full a:after {
+    border-width:7px 7px 0;
+    margin-top:3px;
+}
+
+
+
+.exit:before,
+.exit:after {
+    z-index:1;
+    top:50%;
+    left:8px;
+    width:3px;
+    height:14px;
+    border:5px solid #afdefa;
+    border-width:5px 0;
+    margin-top:-12px;
+    /* css3 */
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+.exit:after {
+    /* css3 */
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+
+
+.exit a:before,
+.exit a:after {
+    z-index:10;
+    left:2px;
+    width:6px;
+    border-width:5px;
+    border-style:solid;
+    border-color:transparent #afdefa;
+    margin-top:-5px;
+    background:transparent;
+    /* css3 */
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+
+.exit a:after {
+    /* css3 */
+    -webkit-transform:rotate(45deg);
+    -moz-transform:rotate(45deg);
+    -ms-transform:rotate(45deg);
+    -o-transform:rotate(45deg);
+    transform:rotate(45deg);
+}
+
+
+
+
+
+* HOME
+------------------------------------------------------------------------------------------------------------------------------- */
+
+.home a:before {
+    left:1px;
+    border-style:solid;
+    border-color:transparent;
+    border-width:8px 7px;
+    border-bottom-color:#c55500;
+    margin-top:-16px;
+    background:transparent;
+}
+
+.home a:after {
+    left:3px;
+    width:2px;
+    height:4px;
+    border-style:solid;
+    border-color:#c55500 #c55500 transparent;
+    border-width:3px 4px 0;
+    margin-top:0;
+    background:transparent;
+}
+
+.home a:hover:before,
+.home a:focus:before,
+.home a:active:before {
+    border-bottom-color:#730800;
+    background:transparent;
+}
+
+.home a:hover:after,
+.home a:focus:after,
+.home a:active:after {
+    border-color:#730800 #730800 transparent;
+}
+
+
+
+/* General styles for all menus */
+.cbp-spmenu {
+	-webkit-overflow-scrolling: touch;
+	background: #47a3da;
+	position: fixed;
+	overflow-y: auto;
+}
+.menuTop {
+	position:fixed;
+	width:100%;
+	height:60px;
+	z-index:999;
+	padding: 5px;
+	margin: 0;
+	top: 0;
+	left: 0;
+	background: #0d77b6;
+
+}
+
+
+.cbp-spmenu h3 {
+	color: #afdefa;
+	font-size: 1.9em;
+
+	font-weight: 300;
+
+}
+
+
+
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 300px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -300px;
+}
+
+.cbp-spmenu-right {
+	right: -300px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 300px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -300px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/* Example media queries */
+
+
+@media screen and (min-width: 320px) {
+	
+
+	.box{
+		width:50%;
+	}
+}
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body>
+
+
+<!-- Left menu element-->
+<nav id="mnu" class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left">
+
+<a style="float:left;padding:20px;" href="https://www.rekenen.nl/"><i class="fa fa-home" style="color:#fff;font-size:30px;text-decoration:underline;">home</i></a>
+
+<p style="clear:both;font-weight:bold;color:#fff;padding-top:20px;padding-left:10px;font-size:16px;">
+Speel ook:<br />
+</p>
+<div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/duikboot-sommen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/duikboot-sommen.png" /><br />Duikboot Sommen</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/rally-v10.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/rally-v10-icon.png" /><br />Rally V10</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/my-smart-horse.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/my-smart-horse.png" /><br />My Smart Horse</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/figo-and-friends-rekenen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-1.bvkstatic.com/nl/static/images/games/figo-and-friends-m.png" /><br />Figo and Friends (+ -)</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/dieren-redden.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/animalrescue.png" /><br />Dieren redden</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/figo-and-friends-tafels.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-1.bvkstatic.com/nl/static/images/games/figo-and-friends-t.png" /><br />Figo and Friends (x)</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/speelgoedwinkel.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/speelgoedwinkel.png" /><br />Speelgoedwinkel</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/nummers-duiken.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/nummer-duiken.png" /><br />Nummers Duiken</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-plussommen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://www.rekenen.nl/static/images/voorbeeld/spuq-plus.png" /><br />SpuQ Plussommen</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/treinstation-klokkijken.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/treinstation-klokkijken.png" /><br />Treinstation Klokkijken</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/telfabriek.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/telfabriek.png" /><br />Telfabriek</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/happy-burger.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-1.bvkstatic.com/nl/static/images/games/happy-burger.png" /><br />Happy Burger</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-delen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://www.rekenen.nl/static/images/voorbeeld/spuq-delen.png" /><br />SpuQ Delen</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/tafels-schieten.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/tafelsschieten.png" /><br />Tafels Schieten</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-keersommen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://www.rekenen.nl/static/images/voorbeeld/spuq-keer.png" /><br />SpuQ Keersommen</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-ballonnen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-1.bvkstatic.com/nl/static/images/games/spuq-ballonnen.png" /><br />SpuQ ballonnen</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-tafels.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://www.rekenen.nl/static/images/voorbeeld/spuq-tafels.png" /><br />SpuQ Tafels</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/tafelskat.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-1.bvkstatic.com/nl/static/images/games/tafelskat.png" /><br />Tafelskat</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/tafels-memory.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://cdn-t-3.bvkstatic.com/nl/static/images/games/tafelsmemory.png" /><br />Tafels Memory</a></div><div style="float:left;margin: 2px 0 10px 5px; text-align:center;border-radius:12px;font-size:17px;color:#fff;font-weight:bold;background-color:#FFFFFF;"><a href="https://www.rekenen.nl/spuq-minsommen.html" style="color:#000000;text-decoration:none;"><img style="border-top-left-radius:12px; border-top-right-radius:12px;" src="https://www.rekenen.nl/static/images/voorbeeld/spuq-min.png" /><br />SpuQ Minsommen</a></div>			
+	
+</nav>
+
+<div id="fScr" style="z-index:999;width:100%;height:100%;position:absolute;left:0;top:0;cursor: pointer;display:none;"></div>
+
+
+
+<div id="darkScreen" style="display:none;z-index: 4;position: absolute;left: 0;top: 0;width: 100%;height: 100%;background-color: rgb(0,0,0);background-color: rgba(0,0,0,0.4);"></div>
+<div class="cntr" id="scherm" style="width:100%;height:100%;display:block;">
+<a id="nav-toggle" class="toggle-menu menu-left" href="#"><span></span></a>
+	
+	<div id="draaiScherm" style="width:100%;height:100%;display:none;z-index:3;position:absolute;top:0;left:0;font-size:30px;margin:0 auto; padding:5% 10%;background-color:#cdefa6;text-align:center;"><img src="https://cdn-t-2.bvkstatic.com/us/static/images/rotate-landscape.png" /><br />  Draai het scherm</div>
+			<object id="gameSrc" scrolling="no" height="100%" width="100%" frameborder="0" seamless="true" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" webkit-playsinline="true" data="https://www.rekenen.nl/gf/figo/fractions1/build/index.html?3817"></object>
+	
+</div>
+	<script src="https://cdn-t-2.bvkstatic.com/us/static/scripts/jquery-1.10.2.min.js" ></script>
+	<script src="https://cdn-t-2.bvkstatic.com/us/static/scripts/custom.js" ></script>
+<script>
+
+$w = $(window);  
+
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; // Detect Android devices
+
+
+
+var spelRotation = 1;
+var schermBreedte = $w.width();
+var schermHoogte = $w.height();
+var verhouding = schermBreedte / schermHoogte;
+function screenWH() 
+{
+$( "#gameSrc" ).css( "height", document.documentElement.clientHeight  ); 
+$( "#draaiScherm" ).css( "height", document.documentElement.clientHeight  ); 	
+
+} 
+
+
+
+
+function goFullScreen() {
+  var
+      el = document.documentElement
+    , rfs =
+           el.requestFullScreen
+        || el.webkitRequestFullScreen
+        || el.mozRequestFullScreen
+        || el.msRequestFullscreen
+
+;
+
+
+
+
+rfs.call(el);
+	//setTimeout(function(){screenWH(); }, 500);
+}
+
+
+
+function toggleFullScreen() {
+  if (!document.fullscreenElement &&    // alternative standard method
+      !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement ) {  // current working methods
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) {
+      document.documentElement.msRequestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) {
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) {
+      document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+    }
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.msExitFullscreen) {
+      document.msExitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    }
+  }
+}
+
+
+	function exitFscreen()
+	{
+	   if (document.exitFullscreen) {
+		  document.exitFullscreen();
+		} else if (document.msExitFullscreen) {
+		  document.msExitFullscreen();
+		} else if (document.mozCancelFullScreen) {
+		  document.mozCancelFullScreen();
+		} else if (document.webkitExitFullscreen) {
+		  document.webkitExitFullscreen();
+		}
+	}
+	
+	if (document.addEventListener)
+{
+    document.addEventListener('webkitfullscreenchange', exitHandler, false);
+    document.addEventListener('mozfullscreenchange', exitHandler, false);
+    document.addEventListener('fullscreenchange', exitHandler, false);
+    document.addEventListener('MSFullscreenChange', exitHandler, false);
+}
+
+function exitHandler()
+{
+    if (document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement !== null)
+    {
+      	setTimeout(function(){screenWH(); }, 500);
+		
+			$('#fScr').remove();
+    }
+}
+	
+
+$(document).ready(function(){
+	var isiPad = navigator.userAgent.match(/iPad/i) != null;
+	var isiPod = navigator.userAgent.match(/iPod/i) != null;
+	var isiPhone = navigator.userAgent.match(/iPhone/i) != null;
+// For use within iPad developer UIWebView
+// Thanks to Andrew Hedges!
+	var ua = navigator.userAgent;
+	var isiPad = /iPad/i.test(ua) || /iPhone OS 3_1_2/i.test(ua) || /iPhone OS 3_2_2/i.test(ua);
+	if(isiPad || isiPhone)
+	{ 
+		$('#fullScreenBtn').remove();
+		$('#fScr').remove();
+	}
+					
+			
+	
+	$('#fsBtn').on('touchstart click', function (e) {
+	toggleFullScreen();
+	console.log(e);
+	});
+	$('#fScr').on('touchstart click', function (e) {
+		if(!isiPad)
+			{ 
+				goFullScreen(); 
+			}
+			
+		$('#fScr').remove();
+	});
+	screenWH(); 
+	 
+	//alert("breedte:"+$w.width()+" hoogte:"+$w.height()+" inbreedte:"+window.innerWidth+" inhoogte:"+window.outerHeight);
+	setTimeout(screenWH, 200);
+	setTimeout(screenWH, 600);
+
+	if (isAndroid){
+		if(schermBreedte < schermHoogte)
+		{
+			
+			//portrait
+			if(spelRotation==1)
+			{
+				$('#draaiScherm').hide();
+			}
+			else
+			{
+				$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-landscape.png\" /><br /> Draai het scherm");
+				$('#draaiScherm').show();
+			}
+			
+			
+		}
+		else
+		{
+			//landscape
+			if(spelRotation==1)
+			{
+				$('#draaiScherm').show();
+				$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-portrait.png\" /><br />  Draai het scherm");
+			}
+			else
+			{
+				$('#draaiScherm').hide();
+			}
+			//$('#gameSrc').show();
+			
+			//$('#gameSrc').hide();
+		}
+	}
+	else
+	{
+	
+		if(schermBreedte < schermHoogte)
+		{
+			//portrait
+			if(spelRotation==1)
+			{
+				$('#draaiScherm').hide();
+			}
+			else
+			{
+				$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-landscape.png\" /><br /> <br />
+<b>Notice</b>:  Undefined variable: gameRotateScreen in <b>/var/www/vhosts/rekenen.nl/htdocs/www/speelspelmobiel.templ.php</b> on line <b>764</b><br />
+");
+				$('#draaiScherm').show();
+			}
+			
+			//$('#gameSrc').hide();
+			
+		}
+		else
+		{
+			//landscape
+			if(spelRotation==1)
+			{
+				$('#draaiScherm').show();
+				$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-portrait.png\" /><br />  Draai het scherm");
+			}
+			else
+			{
+				$('#draaiScherm').hide();
+			}
+			//$('#gameSrc').show();
+		}
+	}
+	
+}); 
+
+
+
+window.addEventListener("orientationchange", function() {
+	// Announce the new orientation number
+	$('#draaiScherm').hide();
+	schermBreedte = $w.width();
+	schermHoogte = $w.height();
+	console.log("schermBreedte: "+schermBreedte);
+	console.log("schermHoogte: "+schermHoogte);
+	
+	
+if (isAndroid){
+	if(schermBreedte < schermHoogte)
+	{
+			//landscape
+		if(spelRotation==1)
+		{
+			$('#draaiScherm').show();
+			$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-portrait.png\" /><br />  Draai het scherm");
+		}
+		else
+		{
+			$('#draaiScherm').hide();
+		}
+		//$('#gameSrc').show();
+		
+		
+	}
+	else
+	{
+		//portrait
+		if(spelRotation==1)
+		{
+			$('#draaiScherm').hide();
+		}
+		else
+		{
+			$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-landscape.png\" /><br />Draai het scherm");
+			$('#draaiScherm').show();
+		}
+		
+		//$('#gameSrc').hide();
+	}
+}
+else
+{
+	
+	if(schermBreedte < schermHoogte)
+	{
+		//portrait
+		if(spelRotation==1)
+		{
+			$('#draaiScherm').hide();
+		}
+		else
+		{
+			$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-landscape.png\" /><br /> Draai het scherm");
+			$('#draaiScherm').show();
+		}
+		
+		//$('#gameSrc').hide();
+		
+	}
+	else
+	{
+		//landscape
+		if(spelRotation==1)
+		{
+			$('#draaiScherm').show();
+			$('#draaiScherm').html("<img src=\"https://cdn-t-2.bvkstatic.com/us/static/images/rotate-portrait.png\" /><br /> Draai het scherm");
+		}
+		else
+		{
+			$('#draaiScherm').hide();
+		}
+		//$('#gameSrc').show();
+	}
+}
+	
+	
+	setTimeout(screenWH, 200);
+	 setTimeout(screenWH, 600);
+		//alert("breedte:"+$w.width()+" hoogte:"+$w.height()+" inbreedte:"+window.innerWidth+" inhoogte:"+document.documentElement.clientHeight);
+		
+}, false);
+
+
+
+
+</script>
+
+<script src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+
+<!--load jPushMenu, required-->
+<script>
+
+var i = document.getElementById("sait");
+
+// go full-screen
+ 
+
+$("#mnu").click(function() {
+    
+});
+
+/*!
+ * jPushMenu.js
+ * 1.1.1
+ * @author: takien
+ * http://takien.com
+ * Original version (pure JS) is created by Mary Lou http://tympanus.net/
+ */
+
+ var myElement = document.getElementById('mnu');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc = new Hammer(myElement);
+
+
+ 
+ var myElement2 = document.getElementById('nav-toggle');
+
+// create a simple instance
+// by default, it only adds horizontal recognizers
+var mc2 = new Hammer(myElement2);
+ 
+(function($) {
+
+	$.fn.jPushMenu = function(customOptions) {
+		var o = $.extend({}, $.fn.jPushMenu.defaultOptions, customOptions);
+		
+		/* add class to the body.*/
+		
+		$('body').addClass(o.bodyClass);
+		$('.menu-left').addClass('jPushMenuBtn');
+		$('.menu-left').on('touchstart click', function (e) {
+			var target         = '',
+			push_direction     = '';
+			 $('#darkScreen').toggle();
+			if($('.menu-left').is('.'+o.showLeftClass)) {
+				target         = '.cbp-spmenu-left';
+				push_direction = 'toright';
+			}
+
+			$('.menu-left').toggleClass( "active" );
+			$('.menu-left').toggleClass(o.activeClass);
+			$(target).toggleClass(o.menuOpenClass);
+	
+			if($('.menu-left').is('.'+o.pushBodyClass)) {
+				$('body').toggleClass( 'cbp-spmenu-push-'+push_direction );
+				
+			}
+			
+				
+			
+			/* disable all other button*/
+			$('.jPushMenuBtn').not($(this)).toggleClass('disabled');
+			
+			return false;
+		});
+		var jPushMenu = {
+			close: function (o) {
+				$('.jPushMenuBtn,body,.cbp-spmenu').removeClass('disabled active cbp-spmenu-open cbp-spmenu-push-toleft cbp-spmenu-push-toright');
+				$('#darkScreen').hide();
+		
+			}
+		}
+		$(document).on('touchstart', function (e) {
+			//console.log(e.target.parentNode);
+			
+			if(!$(event.target).is('#mnu') && !$(event.target).parents("#mnu").is("#mnu"))
+			{
+				jPushMenu.close();
+			}
+			
+		 
+		
+		
+		});
+		
+			
+		
+		if(o.closeOnClickOutside) {
+			 $(document).click(function() { 
+				jPushMenu.close();
+			 }); 
+
+			 $('.cbp-spmenu,.toggle-menu').click(function(e){ 
+				 e.stopPropagation(); 
+				
+			 });
+		 }
+		 			// listen to events... 
+					var pLeft = false;
+					
+					var startX = 0;
+					var startY = 0;
+					mc.on("panstart", function(ev) {
+					 startX = ev.deltaX;
+					 startY = ev.deltaY;
+					});
+				
+				
+		mc.on("panleft panright panend", function(ev) {
+  		  //myElement.textContent = ev.type +" gesture detected.";
+		//console.log(ev.deltaX);
+		//console.log(ev.deltaY);
+		//console.log(ev);
+		var cX = ev.deltaX;
+		var cY = ev.deltaY;
+		
+		var xSom = 0;
+		var ySom = 0;
+		
+		
+		
+		
+		
+		if(ev.type == "panend" && pLeft)
+		{
+			xSom = cX - startX;
+			ySom = cY - startY;
+			console.log("xverschil: "+xSom+" yverschil: "+ySom)
+			if(xSom < 0)
+			{
+				xSom = xSom * -1;
+			}
+			
+			if(ySom < 0)
+			{
+				ySom = ySom * -1;
+			}
+			
+			if(xSom > ySom){
+			jPushMenu.close();
+			}
+		}
+		
+		if(ev.type == "panleft")
+		{	
+			pLeft = true;
+		}
+		if(ev.type == "panright")
+		{	
+			pLeft = false;
+		}
+});
+	};
+ 
+   /* in case you want to customize class name,
+   *  do not directly edit here, use function parameter when call jPushMenu.
+   */
+	$.fn.jPushMenu.defaultOptions = {
+		bodyClass       : 'cbp-spmenu-push',
+		activeClass     : 'menu-active',
+		showLeftClass   : 'menu-left',
+		showRightClass  : 'menu-right',
+		showTopClass    : 'menu-top',
+		showBottomClass : 'menu-bottom',
+		menuOpenClass   : 'cbp-spmenu-open',
+		pushBodyClass   : 'push-body',
+		closeOnClickOutside: true
+	};
+})(jQuery);
+
+<!--call jPushMenu, required-->
+
+jQuery(document).ready(function($) {
+	$('.toggle-menu').jPushMenu();
+});
+</script>
+
+<script>
+// 21-04-2021 12:59:16 
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-57797082-1', 'auto');
+ga('create', 'UA-57797082-38', 'auto', {'name': 'bvk'});
+ga('set', 'anonymizeIp', true);
+ga('bvk.set', 'anonymizeIp', true);
+ga('send', 'pageview');
+ga('bvk.send', 'pageview');
+
+
+</script>
+
+</body>
+
+</html>
